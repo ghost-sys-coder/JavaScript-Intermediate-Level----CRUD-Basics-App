@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+:root {
+    --lightGreenColor: #abcea1;
+}
+
+* {
+    padding: 0;
+    margin: 0px;
+    outline: none;
+    border: none;
+}
+h1 {
+    font-size: 2rem;
+}
+.bold {
+    font-weight: bold;
+}
+span {
+    display: block;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+    background-color: #e5e5e5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightGreenColor);
+}
+
+.app {
+    /* width: 300px; */
+    max-width: 300px;
+    min-height: 500px;
+    border: 5px solid var(--lightGreenColor);
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+    overflow-y: scroll;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    /* margin-inline: auto; */
+}
+
+.app::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+#addNew {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(171, 206, 161, 0.35);
+}
+
+.fa-plus {
+    background-color: var(--lightGreenColor);
+    padding: 4px;
+    border-radius: 4px;
+}
+
+#tasks {
+    display: grid;
+    gap: 14px;
+}
+#tasks div {
+    background-color: #e2eede;
+    border: 3px solid var(--lightGreenColor);
+    padding: 5px;
+    border-radius: 5px;
+    display: grid;
+    gap: 10px;
+}
+.options {
+    justify-self: center;
+    display: flex;
+    gap: 2rem;
+}
+.options i {
+    cursor: pointer;
+}
+
+/**
+    *! STYLES FOR THE MODAL FORM CONTAINER START
+*/
+.container {
+    display: none;
+}
+.error, .errorDate, .errorDesc {
+    font-size: 1rem;
+    color: red;
+    text-align: center;
+    /* border: 1px solid red; */
+    width: 90%;
+    margin-inline: auto;
+    margin-top: .5rem;
+}
+.modal__container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0, 0.3);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+}
+
+.modal__inner-content {
+    width: 500px;
+    height: 95%;
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 4px rgba(0,0,0, 0.3);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.modal__headings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid lightgray;
+
+}
+.modal__headings h1 {
+    font-size: 1rem;
+}
+.modal__headings .close-btn {
+    font-size: 1.4rem;
+    background-color: transparent;
+}
+form {
+    border-bottom: 1px solid lightgray;
+}
+form label {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem;
+}
+form input{
+    padding: .8rem 1rem;
+    margin-inline: auto;
+    border: 1px solid lightgray;
+    width: 90%;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 8px;
+}
+form textarea {
+    border: 1px solid lightgray;
+    width: 90%;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+form input, form textarea {
+    display: block;
+}
+.modal__buttons {
+    float: right;
+    margin-right: 1.5rem;
+    margin-top: 1rem;
+}
+.modal__add-btn {
+    background-color: coral;
+    color: #fff;
+    padding: .8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-left: 1rem;
+}
+
+.modal__close-btn {
+    background-color: darkgray;
+    color: #fff;
+    padding: .8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.modal__add-btn:hover {
+    background-color: transparent;
+    color: coral;
+    border: 1px dashed coral;
+}
+.modal__close-btn:hover {
+    background-color: transparent;
+    border: 1px dashed black;
+    color: #000;
+}
+
+/**
+    *! STYLES FOR THE MODAL FORM CONTAINER END
+*/
+
+/**
+*! MEDIA QUERIES STYLES 
+*/
+@media only screen and (max-width: 900px) {
+     body {
+        font-size: 52.5%;
+    }
+}
